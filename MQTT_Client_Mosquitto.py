@@ -16,6 +16,7 @@ print("connecting to broker")
 client.connect(broker_address) #connect to broker
 client.loop_start() #start the loop
 print("Subscribing to topic","mosquitto/test1")
+client.subscribe("mosquitto/test1")
 client.subscribe("mosquitto/test2")
 print("Publishing message to topic","mosquitto/test2")
 client.publish("mosquitto/test2","OFF")
