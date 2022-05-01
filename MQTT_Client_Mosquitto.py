@@ -19,6 +19,7 @@ client.loop_start() #start the loop
 client.publish("mosquitto/test1","A")
 client.subscribe("mosquitto/test1")
 #print("Publishing message to topic","mosquitto/test2")
+
 client.publish("mosquitto/test2","OFF")
 time.sleep(1) # wait
 client.publish("mosquitto/test1","B")
@@ -28,5 +29,7 @@ time.sleep(1)
 client.publish("mosquitto/test2","ON")
 time.sleep(1)
 client.publish("mosquitto/test1","D")
+
 time.sleep(1)
+
 client.loop_stop() #stop the loop
